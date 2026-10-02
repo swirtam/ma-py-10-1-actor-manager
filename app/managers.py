@@ -25,7 +25,7 @@ class ActorManager:
         """, (new_first_name, new_last_name, pk))
         self.connection.commit()
 
-    def delete(self, pk: str) -> None:
+    def delete(self, pk: int) -> None:
         self.cursor.execute(
             f"DELETE FROM {self.table_name} WHERE id = ?",
             (pk,)
